@@ -1,0 +1,11 @@
+{
+  "name": "WooIonic",
+  "app_id": "a99e2a9d",
+  
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+    
+  }
+  
+}
