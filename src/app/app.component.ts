@@ -25,8 +25,8 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      // Now the platform is ready and our plugins are available.
+      // Here I can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
@@ -35,11 +35,11 @@ export class MyApp {
 this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
 
 this.oneSignal.handleNotificationReceived().subscribe(() => {
- // do something when notification is received
+ // Need to do something when notification is received
 });
 
 this.oneSignal.handleNotificationOpened().subscribe(() => {
-  // do something when a notification is opened
+  // Need to do something when a notification is opened
 });
 
 this.oneSignal.endInit();
