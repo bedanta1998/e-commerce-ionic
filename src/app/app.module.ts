@@ -18,7 +18,7 @@ import { Login } from '../pages/login/login';
 import { Checkout } from '../pages/checkout/checkout';
 import { HttpModule } from '@angular/http';
 import { PayPal } from '@ionic-native/paypal';
-
+import { Search }  from '../pages/search/search';
 import { IonicStorageModule } from '@ionic/storage';
 import { OneSignal } from "@ionic-native/onesignal";
 
@@ -68,7 +68,8 @@ export class MyErrorHandler implements ErrorHandler {
     Cart,
     Signup,
     Login,
-    Checkout
+    Checkout,
+    Search
   ],
   imports: [
     BrowserModule,
@@ -86,7 +87,8 @@ export class MyErrorHandler implements ErrorHandler {
     Cart,
     Signup,
     Login,
-    Checkout
+    Checkout,
+    Search
   ],
   providers: [
     StatusBar,

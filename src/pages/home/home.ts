@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Slides, ToastController } from 'ionic-angular';
+import { NavController, Slides, ToastController, Searchbar } from 'ionic-angular';
 import { ProductDetails } from '../product-details/product-details';
 
 import * as WC from 'woocommerce-api';
 import { DEPRECATED_PLURAL_FN } from '@angular/common/src/i18n/localization';
+import { Search } from '../search/search';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +14,9 @@ export class HomePage {
 
   WooCommerce: any;
   products: any[];
-  moreProducts: any[]
+  moreProducts: any[];
   page: number;
+  searchQuery: string = "";
 
   @ViewChild('productSlides') productSlides: Slides;
 
@@ -90,5 +92,11 @@ export class HomePage {
      this.navCtrl.push(ProductDetails, {"product": product});
    }
 
+
+   onSearch(event){
+     if(this.searchQuery.length > 0) {
+       this.navCtrl.push(Search, {"searchQuery": this.searchQuery});
+     }
+   }
 
 }

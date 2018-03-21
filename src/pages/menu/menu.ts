@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { HomePage } from "../home/home";
 import { Signup } from '../signup/signup';
 import { Login } from '../login/login';
